@@ -9,7 +9,7 @@
       "projectType": "application",
       "prefix": "app",
       "schematics": {
-          "@schematics/angular:application": {
+        "@schematics/angular:application": {
           "strict": false
         }
       },
@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ag-grid-community/src/styles/ag-grid.scss",
+              "./node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine.scss",
               "src/styles.css"
             ],
             "scripts": []

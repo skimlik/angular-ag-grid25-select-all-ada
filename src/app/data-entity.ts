@@ -3,7 +3,7 @@ export interface IDataEntity {
   age: number;
   country: string;
   year: number;
-  date: Date;
+  date: string;
   sport: string;
   gold: number;
   silver: number;

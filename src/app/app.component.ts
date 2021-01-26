@@ -14,33 +14,35 @@ export class AppComponent {
 
   columnDefs: ColDef[] = this.columnFactory.getColumns();
   defaultColDef: ColDef = {};
-  rowSelection = true;
-  rowData: IDataEntity[] = [{
-    name: 'Alicia Coutts',
-    age: 24,
-    country: 'Australia',
-    year: 2012,
-    date: new Date(2012, 07, 12),
-    sport: 'Swimming',
-    gold: 1,
-    silver: 3,
-  }, {
-    name: 'Missy Franklin',
-    age: 17,
-    country: 'United States',
-    year: 2012,
-    date: new Date(2012, 07, 12),
-    sport: 'Swimming',
-    gold: 4,
-    silver: 0,
-  }];
+  rowSelection = "single";
+  rowData: IDataEntity[] = [
+    {
+      name: "Alicia Coutts",
+      age: 24,
+      country: "Australia",
+      year: 2012,
+      date: "2017-08-12",
+      sport: "Swimming",
+      gold: 1,
+      silver: 3
+    },
+    {
+      name: "Missy Franklin",
+      age: 17,
+      country: "United States",
+      year: 2012,
+      date: "2017-08-12",
+      sport: "Swimming",
+      gold: 4,
+      silver: 0
+    }
+  ];
 
   constructor(private columnFactory: GridColumnFactory) {
     this.defaultColDef = {
       flex: 1,
       minWidth: 100
     };
-    this.rowSelection = "single";
   }
 
   onSelectionChanged() {
