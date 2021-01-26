@@ -37,34 +37,34 @@ export class AppComponent {
       silver: 0
     },
     {
-      name: 'Michael Phelps',
+      name: "Michael Phelps",
       age: 23,
-      country: 'United States',
+      country: "United States",
       year: 2008,
-      date: '2008-08-24',
-      sport: 'Swimming',
+      date: "2008-08-24",
+      sport: "Swimming",
       gold: 8,
-      silver: 0,
+      silver: 0
     },
     {
-      name: 'Ian Thorpe',
+      name: "Ian Thorpe",
       age: 17,
-      country: 'Australia',
+      country: "Australia",
       year: 2008,
-      date: '2000-10-01',
-      sport: 'Swimming',
+      date: "2000-10-01",
+      sport: "Swimming",
       gold: 3,
-      silver: 2,
+      silver: 2
     },
     {
-      name: 'Cindy Klassen',
+      name: "Cindy Klassen",
       age: 26,
-      country: 'Canada',
+      country: "Canada",
       year: 2008,
-      date: '2006-02-26',
-      sport: 'Speed Skating',
+      date: "2006-02-26",
+      sport: "Speed Skating",
       gold: 1,
-      silver: 2,
+      silver: 2
     }
   ];
 
@@ -78,7 +78,7 @@ export class AppComponent {
   onSelectionChanged() {
     var selectedRows = this.gridApi.getSelectedRows();
     document.querySelector("#selectedRows").innerHTML =
-      selectedRows.length === 1 ? selectedRows[0].athlete : "";
+      selectedRows.length === 1 ? selectedRows[0].name : "";
   }
 
   onGridReady(params) {

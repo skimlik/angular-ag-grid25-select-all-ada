@@ -5,10 +5,11 @@ import { ColDef } from "ag-grid-community";
 export class GridColumnFactory {
   private columns: ColDef[] = [
     {
-      field: "athlete",
+      field: "name",
+      headerName: "Athlete",
       minWidth: 150,
       headerCheckboxSelection: true,
-      checkboxSelection: true,
+      checkboxSelection: true
     },
     {
       field: "age",
