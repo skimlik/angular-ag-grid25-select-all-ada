@@ -6,7 +6,9 @@ export class GridColumnFactory {
   private columns: ColDef[] = [
     {
       field: "athlete",
-      minWidth: 150
+      minWidth: 150,
+      headerCheckboxSelection: true,
+      checkboxSelection: true,
     },
     {
       field: "age",

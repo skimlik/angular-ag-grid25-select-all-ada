@@ -35,6 +35,36 @@ export class AppComponent {
       sport: "Swimming",
       gold: 4,
       silver: 0
+    },
+    {
+      name: 'Michael Phelps',
+      age: 23,
+      country: 'United States',
+      year: 2008,
+      date: '2008-08-24',
+      sport: 'Swimming',
+      gold: 8,
+      silver: 0,
+    },
+    {
+      name: 'Ian Thorpe',
+      age: 17,
+      country: 'Australia',
+      year: 2008,
+      date: '2000-10-01',
+      sport: 'Swimming',
+      gold: 3,
+      silver: 2,
+    },
+    {
+      name: 'Cindy Klassen',
+      age: 26,
+      country: 'Canada',
+      year: 2008,
+      date: '2006-02-26',
+      sport: 'Speed Skating',
+      gold: 1,
+      silver: 2,
     }
   ];
 
