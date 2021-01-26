@@ -6,7 +6,12 @@
 		<span id="selectedRows"></span>
 	</div>
 	<ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine"
-		[columnDefs]="columnDefs" [defaultColDef]="defaultColDef" [rowSelection]="rowSelection" [rowData]="rowData"
-		(selectionChanged)="onSelectionChanged($event)" (gridReady)="onGridReady($event)" [domLayout]="true">
+		[columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowSelection]="rowSelection"
+    [rowData]="rowData"
+		(selectionChanged)="onSelectionChanged($event)"
+    (gridReady)="onGridReady($event)"
+    [domLayout]="true">
 	</ag-grid-angular>
 </div>
