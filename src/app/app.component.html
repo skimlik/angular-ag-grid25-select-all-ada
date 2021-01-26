@@ -1,16 +1,21 @@
-<h1>"Ag-Grid 25.0.1"></h1>
+<h1>"Ag-Grid 25.0.1"</h1>
 
 <div class="example-wrapper">
-	<div class="example-header">
-		Selection:
-		<span id="selectedRows"></span>
-	</div>
-	<ag-grid-angular #agGrid style="width: 100%; height: 480px;" id="myGrid" class="ag-theme-alpine"
-		[columnDefs]="columnDefs"
+  <div class="example-header">
+    Selection:
+    <span id="selectedRows"></span>
+  </div>
+  <ag-grid-angular
+    #agGrid
+    style="width: 100%; height: 480px;"
+    id="myGrid"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
     [defaultColDef]="defaultColDef"
     [rowSelection]="rowSelection"
     [rowData]="rowData"
-		(selectionChanged)="onSelectionChanged()"
-    (gridReady)="onGridReady($event)">
-	</ag-grid-angular>
+    (selectionChanged)="onSelectionChanged()"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
 </div>
