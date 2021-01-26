@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { ColDef } from "ag-grid-community";
+import { GridColumnFactory } from "./grid-columns.factory";
 
 @Component({
   selector: "my-app",
@@ -9,42 +11,12 @@ export class AppComponent {
   private gridApi;
   private gridColumnApi;
 
-  private columnDefs;
+  private columnDefs: ColDef[] = this.columnFactory.getColumns();
   private defaultColDef;
   private rowSelection;
   private rowData: [];
 
-  constructor() {
-    this.columnDefs = [
-      {
-        field: "athlete",
-        minWidth: 150
-      },
-      {
-        field: "age",
-        maxWidth: 90
-      },
-      {
-        field: "country",
-        minWidth: 150
-      },
-      {
-        field: "year",
-        maxWidth: 90
-      },
-      {
-        field: "date",
-        minWidth: 150
-      },
-      {
-        field: "sport",
-        minWidth: 150
-      },
-      { field: "gold" },
-      { field: "silver" },
-      { field: "bronze" },
-      { field: "total" }
-    ];
+  constructor(private columnFactory: GridColumnFactory) {
     this.defaultColDef = {
       flex: 1,
       minWidth: 100
@@ -61,11 +33,5 @@ export class AppComponent {
   onGridReady(params) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-
-    this.http
-      .get("https://www.ag-grid.com/example-assets/olympic-winners.json")
-      .subscribe(data => {
-        this.rowData = data;
-      });
   }
 }
