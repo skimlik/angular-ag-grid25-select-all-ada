@@ -1,4 +1,12 @@
-<hello name="Ag-Grid 25.0.1"></hello>
-<p>
-	Start editing to see some magic happen :)
-</p>
+<h1>"Ag-Grid 25.0.1"></h1>
+
+<div class="example-wrapper">
+	<div class="example-header">
+		Selection:
+		<span id="selectedRows"></span>
+	</div>
+	<ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine"
+		[columnDefs]="columnDefs" [defaultColDef]="defaultColDef" [rowSelection]="rowSelection" [rowData]="rowData"
+		(selectionChanged)="onSelectionChanged($event)" (gridReady)="onGridReady($event)" [domLayout]="true">
+	</ag-grid-angular>
+</div>
