@@ -34,7 +34,7 @@ export class GridColumnFactory {
     { field: "total" }
   ];
 
-  private getColumns(): ColDef[] {
+  getColumns(): ColDef[] {
     return this.columns;
   }
 }
